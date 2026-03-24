@@ -69,7 +69,7 @@ Impressoras térmicas frequentemente centralizam o conteúdo verticalmente, cria
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/thermotype-58.git
+git clone https://github.com/magosheimus/thermotype-58.git
 cd thermotype-58
 ```
 
@@ -137,114 +137,6 @@ ThermoType 58/
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-
-## 🌱 Autor
-
-Projeto independente desenvolvido a partir de uma necessidade prática no uso diário de impressoras térmicas.
-
----
-
-**⭐ Se este projeto foi útil para você, considere dar uma estrela!**
-
-## 🎯 Problema 
-
-Impressoras térmicas frequentemente centralizam o conteúdo verticalmente, criando grandes espaços em branco no início da impressão e desperdiçando papel. Este aplicativo detecta e remove automaticamente essas margens, forçando a impressão a começar no topo absoluto do papel.
-
-### Objetivo:
-- Eficiência e redução de desperdício
-- Simplicidade e controle direto
-- Interface leve e funcional
-
-## ✨ Funcionalidades
-
-- **Interface Vintage Windows 95/98**: Design retrô nostálgico
-- **Editor de Texto**: Escreva diretamente no app e imprima na hora
-- **Seleção de Fontes do Sistema**: Todas as fontes instaladas, com recentes no topo
-- **Formatação Completa**: Negrito, itálico, sublinhado, tamanho e alinhamento
-- **Seleção de Impressora**: Escolha qual impressora usar, com atualização em tempo real
-- **Auto Top Fix**: Remove automaticamente margem branca superior
-- **Preview em Tempo Real**: Visualize exatamente como ficará a impressão
-- **Ajuste de Largura Automático**: Redimensiona para 58mm (384px)
-- **Offset Manual**: Controle fino da posição vertical (em mm)
-- **Drag & Drop**: Arraste imagens diretamente para o preview
-- **Múltiplos Formatos**: Suporte para PNG, JPG, JPEG, BMP
-- **Salvar como Imagem**: Exporte o texto renderizado em PNG, JPG ou BMP
-- **Múltiplas Cópias**: Imprima várias cópias de uma vez
-- **Histórico de Imagens**: Acesso rápido às últimas imagens usadas
-
-
-## 📋 Requisitos
-
-- Windows 10+
-- Python 3.8+
-- Impressora térmica 58mm (ESC/POS compatível)
-- Driver da impressora instalado
-
-## 🚀 Instalação e Uso
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/thermotype-58.git
-cd thermotype-58
-```
-
-### 2. Instale as dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Execute o aplicativo
-
-```bash
-python main.py
-```
-
-### 4. (Opcional) Criar executável standalone
-
-Se preferir um arquivo .exe:
-
-```bash
-python build_exe.py
-```
-
-O executável será criado em `dist/ThermoType 58.exe`
-
-## Como Usar
-
-1. Abrir ou arrastar imagem
-2. (Opcional) Ajustar offset / cópias
-3. Visualizar preview
-4. Imprimir
-
-## 📁 Estrutura do Projeto
-
-```
-ThermoType 58/
-├── main.py                 # Aplicativo principal
-├── text_editor.py          # Editor de texto com fontes
-├── image_processor.py      # Processamento de imagens
-├── printer_handler.py      # Interface com impressora
-├── config.py              # Configurações
-├── build_exe.py           # Script para criar executável
-├── requirements.txt       # Dependências Python
-├── printer.ico           # Ícone do aplicativo
-└── README.md             # Este arquivo
-```
-
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Python 3.8+**: Linguagem de programação
-- **Tkinter + TkinterDnD2**: Interface gráfica com drag & drop
-- **Pillow (PIL)**: Processamento de imagens
-- **pywin32**: Comunicação com impressoras Windows
-- **PyInstaller**: Criação de executável
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 🌱 Autor
 
