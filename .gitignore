@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+ENV/
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+
+# Project specific
+history.json
+editor_settings.json
+templates.json
+font_history.json
+_last_text_preview.png
+
+# Obsidian
+.obsidian/
+
+# Temporary files
+*.log
+*.tmp
