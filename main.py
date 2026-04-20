@@ -89,6 +89,7 @@ class TopStartThermalApp:
         self.original_image = None
         self.processed_image = None
         self.current_file = None
+        self._current_mode = "text"  # "image" ou "text"
         self.auto_top_fix = tk.BooleanVar(value=True)
         self.manual_offset = tk.IntVar(value=0)
         self.num_copies = tk.IntVar(value=1)
@@ -1068,6 +1069,7 @@ class TopStartThermalApp:
             self.original_image = Image.open(file_path)
             self.add_to_history(file_path)
             self.process_image()
+            self._current_mode = "image"
             # Substituir textarea pelo canvas
             self.text_editor_desk.pack_forget()
             self.text_preview_info.pack_forget()
@@ -1103,6 +1105,7 @@ class TopStartThermalApp:
 
     def _show_text_mode(self):
         """Volta para o editor de texto, ocultando o preview de imagem."""
+        self._current_mode = "text"
         self.preview_canvas.pack_forget()
         self.preview_scroll.pack_forget()
         self.text_editor_desk.pack(fill=tk.BOTH, expand=True)
@@ -1199,6 +1202,7 @@ class TopStartThermalApp:
         self.preview_scroll.pack(side=tk.RIGHT, fill=tk.Y)
         self.preview_canvas.pack(padx=3, pady=3, fill=tk.BOTH, expand=True)
         self.preview_label_frame.config(text="Preview da Impressão")
+        self._current_mode = "image"
         self.edit_text_btn.pack(side=tk.BOTTOM, fill=tk.X, pady=(0, 2),
                                 before=self.save_text_btn)
         self.update_preview()
@@ -1292,7 +1296,7 @@ class TopStartThermalApp:
 
         num_copies = self.num_copies.get()
 
-        if self.original_image and self.processed_image:
+        if self._current_mode == "image" and self.original_image and self.processed_image:
             # ── Imprimir imagem carregada ─────────────────────────────────
             try:
                 print_img = self.image_processor.convert_to_monochrome(self.processed_image)
